@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Background
   - Obstacle
+  - NPC
+  - Player Dialog
   layers:
   - Default
   - TransparentFX
@@ -48,6 +50,9 @@ TagManager:
     locked: 0
   - name: obstacles
     uniqueID: 1136356335
+    locked: 0
+  - name: npc
+    uniqueID: 4063222249
     locked: 0
   - name: player
     uniqueID: 4147725643

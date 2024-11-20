@@ -6,12 +6,12 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
     private Vector2 movement;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb; // trying to connect it in the editor to see what happens
 
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
+    // private void Awake()
+    // {
+    //     rb = GetComponent<Rigidbody2D>();
+    // }
 
     private void Update()
     {
