@@ -9,13 +9,29 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb; 
     public Animator animator;
 
+    // private bool canMove;
+
+    // private void Start()
+    // {
+    //     canMove = false;
+    // }
+
     private void Update()
     {
-        movement.Set(InputManager.movement.x, InputManager.movement.y);
-        rb.velocity = movement * moveSpeed;
+        // if (canMove)
+        // {
+            movement.Set(InputManager.movement.x, InputManager.movement.y);
+            rb.velocity = movement * moveSpeed;
+        // }
+
         if (rb.velocity != Vector2.zero) { PlayerMove(); }
         else { PlayerStop(); }
     }
+
+    // public void PlayerCanMove()
+    // {
+    //     canMove = true;
+    // }
 
     public void PlayerMove()
     {
