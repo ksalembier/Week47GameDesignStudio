@@ -10,9 +10,9 @@ public class Collision : MonoBehaviour
     public GameObject dialogCanvas;
     public TextMeshProUGUI text;
     private string[] responses = new string[] 
-            {"Oh, nothing much.", "We're just going for a walk.", "I'm fine, thank you.",
+            {"Oh, nothing much.", "We're just going for a walk.", "I'm well, thanks.",
              "Yeah, we're enjoying the fresh air.", "It's nothing, really.", "I think we'll keep going for a while.",
-             "I'm fine.", "Just walking.", "No, thank you"}; 
+             "I'm fine.", "We're ust walking.", "No, thank you"}; 
     private int currentResponse = 0;
     
     void Start()
