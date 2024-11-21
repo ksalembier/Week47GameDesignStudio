@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Rendering.PostProcessing;
 
 public class Collision : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class Collision : MonoBehaviour
     private string[] responses = new string[] 
             {"Oh, nothing much.", "We're just going for a walk.", "I'm well, thanks.",
              "Yeah, we're enjoying the fresh air.", "It's nothing, really.", "I think we'll keep going for a while.",
-             "I'm fine.", "We're ust walking.", "No, thank you"}; 
+             "I'm fine.", "We're just walking.", "No, thank you"}; 
     private int currentResponse = 0;
     
     void Start()
@@ -25,7 +26,7 @@ public class Collision : MonoBehaviour
     {
         if (collision.gameObject.tag == "Obstacle")
         {
-            Debug.Log("obstacle");
+            GetComponent<PostProcessing>().EditColorGrading(-30);
         }
     }
 
@@ -34,7 +35,7 @@ public class Collision : MonoBehaviour
     {
         if (collision.gameObject.tag == "Obstacle")
         {
-            Debug.Log("obstacle");
+            GetComponent<PostProcessing>().EditColorGrading(30);
         }
     }
 
@@ -49,8 +50,7 @@ public class Collision : MonoBehaviour
         {
             text.text = responses[currentResponse];
             dialogCanvas.SetActive(true);
-        }
-           
+        }   
     }
 
     // manages collision with npc colliders and player response colliders
