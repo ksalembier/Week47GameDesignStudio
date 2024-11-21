@@ -54,6 +54,9 @@ TagManager:
   - name: npc
     uniqueID: 4063222249
     locked: 0
+  - name: stroller
+    uniqueID: 1958021203
+    locked: 0
   - name: player
     uniqueID: 4147725643
     locked: 0

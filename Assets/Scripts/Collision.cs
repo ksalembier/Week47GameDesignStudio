@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Collision : MonoBehaviour
 {
     private BoxCollider2D playerCollider;
-    public GameObject[] responses = new GameObject[12]; // this becomes array of strings
+    public GameObject dialogCanvas;
+    public TextMeshProUGUI text;
+    private string[] responses = new string[] 
+            {"Oh, nothing much.", "We're just going for a walk.", "I'm fine, thank you.",
+             "Yeah, we're enjoying the fresh air.", "It's nothing, really.", "I think we'll keep going for a while.",
+             "I'm fine.", "Just walking.", "No, thank you"}; 
     private int currentResponse = 0;
     
     void Start()
@@ -18,7 +25,7 @@ public class Collision : MonoBehaviour
     {
         if (collision.gameObject.tag == "Obstacle")
         {
-
+            Debug.Log("obstacle");
         }
     }
 
@@ -27,7 +34,7 @@ public class Collision : MonoBehaviour
     {
         if (collision.gameObject.tag == "Obstacle")
         {
-            
+            Debug.Log("obstacle");
         }
     }
 
@@ -40,8 +47,10 @@ public class Collision : MonoBehaviour
         }
         else if (collider.gameObject.tag == "Player Dialog")
         {
-            responses[currentResponse].SetActive(true); // this becomes changing the text of the UI and then setting it active
+            text.text = responses[currentResponse];
+            dialogCanvas.SetActive(true);
         }
+           
     }
 
     // manages collision with npc colliders and player response colliders
@@ -53,7 +62,7 @@ public class Collision : MonoBehaviour
         }
         else if (collider.gameObject.tag == "Player Dialog")
         {
-            responses[currentResponse].SetActive(false); // set UI inactive 
+            dialogCanvas.SetActive(false);
             currentResponse++;
         }
     }
