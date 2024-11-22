@@ -4,36 +4,31 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] AudioSource happyMusic;
-    [SerializeField] AudioSource sadMusic;
+    [SerializeField] AudioSource mainTheme;
 
-    public AudioClip happy;
-    public AudioClip sad;
+    public AudioClip theme;
 
-    public static AudioManager instance;
+    // public static AudioManager instance;
 
-    private void Awake()
-    {
-        if (instance == null) 
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else {Destroy(gameObject);}
-    }
+    // private void Awake()
+    // {
+    //     if (instance == null) 
+    //     {
+    //         instance = this;
+    //         DontDestroyOnLoad(gameObject);
+    //     }
+    //     else {Destroy(gameObject);}
+    // }
     
     void Start()
     {
-        happyMusic.clip = happy;
-        happyMusic.Play();
-        
-        sadMusic.clip = sad;
-        sadMusic.Play();
+        mainTheme.clip = theme;
+        mainTheme.Play();
+        //36.805
     }
 
-    void ChangeValues(float happyChange, float sadChange)
+    void ChangeValues(float change)
     {
-        happyMusic.volume = happyMusic.volume + happyChange;
-        sadMusic.volume = sadMusic.volume + sadChange;
+        mainTheme.volume = mainTheme.volume + change;
     }
 }

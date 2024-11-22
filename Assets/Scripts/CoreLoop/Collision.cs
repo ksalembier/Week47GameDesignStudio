@@ -9,7 +9,6 @@ using UnityEngine.SceneManagement;
 public class Collision : MonoBehaviour
 {
     private BoxCollider2D playerCollider;
-    public GameObject audioPlayer;
     public GameObject dialogCanvas;
     public TextMeshProUGUI text;
     private string[] responses = new string[] 
@@ -29,12 +28,11 @@ public class Collision : MonoBehaviour
         if (collision.gameObject.tag == "Obstacle")
         {
             GetComponent<PostProcessing>().EditColorGrading(-30);
-            //audioPlayer.GetComponent<AudioManager>().ChangeValues(happy, sad;)
         }
-        if (collision.gameObject.tag == "End")
-        {
-            SceneManager.LoadScene("CutScene");
-        }
+        // if (collision.gameObject.tag == "End")
+        // {
+        //     SceneManager.LoadScene("CutScene");
+        // }
     }
 
     // manages collision with obstacles; triggers post-processing and audio
@@ -43,7 +41,6 @@ public class Collision : MonoBehaviour
         if (collision.gameObject.tag == "Obstacle")
         {
             GetComponent<PostProcessing>().EditColorGrading(30);
-            //audioPlayer.GetComponent<AudioManager>().ChangeValues(happy, sad;)
         }
     }
 

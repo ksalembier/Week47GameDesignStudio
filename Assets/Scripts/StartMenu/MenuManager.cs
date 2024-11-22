@@ -7,7 +7,7 @@ public class MenuManager : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             this.gameObject.SetActive(false);
             SceneManager.LoadScene("CoreLoop");
