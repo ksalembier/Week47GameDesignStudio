@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class Collision : MonoBehaviour
 {
     private BoxCollider2D playerCollider;
-    public GameObject audio;
+    public GameObject audioPlayer;
     public GameObject dialogCanvas;
     public TextMeshProUGUI text;
     private string[] responses = new string[] 
@@ -29,7 +29,7 @@ public class Collision : MonoBehaviour
         if (collision.gameObject.tag == "Obstacle")
         {
             GetComponent<PostProcessing>().EditColorGrading(-30);
-            //audio.GetComponent<AudioManager>().ChangeValues(happy, sad;)
+            //audioPlayer.GetComponent<AudioManager>().ChangeValues(happy, sad;)
         }
         if (collision.gameObject.tag == "End")
         {
@@ -43,7 +43,7 @@ public class Collision : MonoBehaviour
         if (collision.gameObject.tag == "Obstacle")
         {
             GetComponent<PostProcessing>().EditColorGrading(30);
-            //audio.GetComponent<AudioManager>().ChangeValues(happy, sad;)
+            //audioPlayer.GetComponent<AudioManager>().ChangeValues(happy, sad;)
         }
     }
 
