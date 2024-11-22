@@ -9,7 +9,7 @@ public class GBRolling : MonoBehaviour
     public GameObject bg1;
     public GameObject bg2;
     public GameObject swap;
-    // Start is called before the first frame update
+
     void Start()
     {
         p1 = bg1.transform.position;
