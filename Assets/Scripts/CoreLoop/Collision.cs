@@ -29,10 +29,6 @@ public class Collision : MonoBehaviour
         {
             GetComponent<PostProcessing>().EditColorGrading(-30);
         }
-        // if (collision.gameObject.tag == "End")
-        // {
-        //     SceneManager.LoadScene("CutScene");
-        // }
     }
 
     // manages collision with obstacles; triggers post-processing and audio

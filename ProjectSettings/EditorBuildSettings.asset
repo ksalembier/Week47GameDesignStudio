@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CoreLoop.unity
     guid: d258138ed14f4a840a3f75db278f2dd4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/CutScene.unity
     guid: 01b5c4f29c6e37146bf2237f5968be5b
   m_configObjects: {}
