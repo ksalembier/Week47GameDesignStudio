@@ -18,9 +18,19 @@ public class CutSceneController : MonoBehaviour
 
     private IEnumerator Start()
     {
-        yield return sceneFade.FadeInCoroutine(4);
-        yield return new WaitForSeconds(4);
+        // changing audio clip
+        audioFade[0].ChangeClip(1);
+        // fading buzzing from 0 to .1
+        yield return audioFade[0].FadeSoundCoroutine(0.01f, 0.2f, 2);
+        // fading scene in 
+        yield return sceneFade.FadeInCoroutine(sceneFadeDuration);
+        // fading buzzing from .1 to .2
+        // holding on cut scene image
+        yield return new WaitForSeconds(sceneFadeDuration);
+        // fading scene out
         yield return sceneFade.FadeOutCoroutine(sceneFadeDuration);
-        yield return audioFade[0].FadeSoundOutCoroutine(4);
+        // fading buzzing from .2 to 0
+        yield return audioFade[0].FadeSoundCoroutine(0.2f, 0.0f, sceneFadeDuration);
     }
+
 }

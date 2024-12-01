@@ -15,8 +15,6 @@ public class PostProcessing : MonoBehaviour
     private float saturationChangeUnit;
     private int currentSaturationChange;
 
-    //private AudioSource mainTheme;
-
     void Start()
     {
         ppv.profile.TryGetSettings(out colorGrading);
@@ -26,8 +24,6 @@ public class PostProcessing : MonoBehaviour
         startDistance = endY - playerY;
         saturationChangeUnit = startDistance/100;
         currentSaturationChange = 0;
-
-        //mainTheme = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -40,7 +36,6 @@ public class PostProcessing : MonoBehaviour
         {
             EditColorGrading(-1);
             currentSaturationChange++;
-            //mainTheme.volume = mainTheme.volume - 0.1f;
         }
     }
 

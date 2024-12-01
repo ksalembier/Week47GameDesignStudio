@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] AudioSource backgroundMusic;
-    public AudioClip background;
+    // buzzing sound effect: https://www.zapsplat.com/music/designed-long-buzzing-and-humming/
+
+    [SerializeField] AudioSource source;
+    public AudioClip menu;
+    public AudioClip theme;
+    public AudioClip buzzing;
     public static AudioManager instance;
 
     private void Awake()
@@ -20,19 +24,21 @@ public class AudioManager : MonoBehaviour
     
     void Start()
     {
-        backgroundMusic.clip = background;
-        backgroundMusic.Play();
+        source.clip = menu;
+        source.Play();
     }
 
-    public IEnumerator FadeSoundOutCoroutine(float duration)
+    public void ChangeClip(int clip)
     {
-        Debug.Log("in the fade out method");
-        float startVolume = 1.0f;
-        float targetVolume = 0.01f;
-        yield return FadeSoundCoroutine(startVolume, targetVolume, duration);
+        source.Stop();
+        if (clip == 0)
+        { source.clip = theme;}
+        if (clip == 1)
+        { source.clip = buzzing;}
+        source.Play();
     }
 
-    private IEnumerator FadeSoundCoroutine(float startVolume, float targetVolume, float duration)
+    public IEnumerator FadeSoundCoroutine(float startVolume, float targetVolume, float duration)
     {
         float elapsedTime = 0;
         float elapsedPercentage = 0;
@@ -40,9 +46,10 @@ public class AudioManager : MonoBehaviour
         while (elapsedPercentage < 1)
         {
             elapsedPercentage = elapsedTime / duration;
-            backgroundMusic.volume = Mathf.Lerp(startVolume, targetVolume, elapsedPercentage);
+            source.volume = Mathf.Lerp(startVolume, targetVolume, elapsedPercentage);
             yield return null;
             elapsedTime += Time.deltaTime;
         }
     }
+
 }

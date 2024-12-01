@@ -11,6 +11,7 @@ public class Collision : MonoBehaviour
     private BoxCollider2D playerCollider;
     public GameObject dialogCanvas;
     public TextMeshProUGUI text;
+    public GameObject[] responseColliders = new GameObject[9];
     private string[] responses = new string[] 
             {"Oh, nothing much.", "We're just going for a walk.", "I'm well, thanks.",
              "Yeah, we're enjoying the fresh air.", "It's nothing, really.", "I think we'll keep going for a while.",
@@ -49,6 +50,8 @@ public class Collision : MonoBehaviour
         }
         else if (collider.gameObject.tag == "Player Dialog")
         {
+            // int colliderIndex = responseColliders.IndexOf(responseColliders, collider.gameObject);
+            // Debug.Log(colliderIndex);
             text.text = responses[currentResponse];
             dialogCanvas.SetActive(true);
         }   

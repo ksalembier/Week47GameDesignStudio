@@ -790,7 +790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93bc31ffb41c9834ca132f1044ccfb8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneFadeDuration: 2
+  sceneFadeDuration: 4
 --- !u!1 &1183284970
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,8 +820,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 831951d16412a28429ca04085291e063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundMusic: {fileID: 367840640}
-  background: {fileID: 8300000, guid: a25686062c848664b8bc28e3dadd7482, type: 3}
+  source: {fileID: 367840640}
+  menu: {fileID: 8300000, guid: 8271249b333f1d14c89865d3b171bc9d, type: 3}
+  theme: {fileID: 8300000, guid: a25686062c848664b8bc28e3dadd7482, type: 3}
+  buzzing: {fileID: 8300000, guid: bb8b726f8d635c54d852b12e9651bf27, type: 3}
 --- !u!4 &1183284972
 Transform:
   m_ObjectHideFlags: 0

@@ -386,6 +386,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3015579335273419436, guid: abff1f9d2d6ea0646902f08c9694c942, type: 3}
   m_PrefabInstance: {fileID: 36895130}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &46421053 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1623601600730999432, guid: f7792ce00c3c0aa48aa646180006c770, type: 3}
+  m_PrefabInstance: {fileID: 1176213166}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &93904825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1537,6 +1542,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3015579335273419436, guid: abff1f9d2d6ea0646902f08c9694c942, type: 3}
   m_PrefabInstance: {fileID: 335664195}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &358194427 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8840488909975827656, guid: 2de642e5cfc293a439038bd571767f2f, type: 3}
+  m_PrefabInstance: {fileID: 5990119579088619475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &380027938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2121,6 +2131,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3015579335273419436, guid: abff1f9d2d6ea0646902f08c9694c942, type: 3}
   m_PrefabInstance: {fileID: 450837000}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &451583953 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3670667314750829413, guid: ff0c22e08b8671c49a32e7b596a35e48, type: 3}
+  m_PrefabInstance: {fileID: 1710615465}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &456501525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2484,6 +2499,11 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!1 &491937236 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1623601600730999432, guid: f7792ce00c3c0aa48aa646180006c770, type: 3}
+  m_PrefabInstance: {fileID: 1452655373}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &498035947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2653,8 +2673,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 831951d16412a28429ca04085291e063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundMusic: {fileID: 273033063}
-  background: {fileID: 8300000, guid: a25686062c848664b8bc28e3dadd7482, type: 3}
+  source: {fileID: 273033063}
+  menu: {fileID: 8300000, guid: 8271249b333f1d14c89865d3b171bc9d, type: 3}
+  theme: {fileID: 8300000, guid: a25686062c848664b8bc28e3dadd7482, type: 3}
+  buzzing: {fileID: 8300000, guid: bb8b726f8d635c54d852b12e9651bf27, type: 3}
 --- !u!4 &507827058
 Transform:
   m_ObjectHideFlags: 0
@@ -2932,7 +2954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4107,6 +4129,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3015579335273419436, guid: abff1f9d2d6ea0646902f08c9694c942, type: 3}
   m_PrefabInstance: {fileID: 982737239}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &998248981 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8840488909975827656, guid: 2de642e5cfc293a439038bd571767f2f, type: 3}
+  m_PrefabInstance: {fileID: 848478691}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &999298054
 PrefabInstance:
@@ -6916,6 +6943,11 @@ Canvas:
   m_SortingLayerID: -452736897
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1585924142 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1623601600730999432, guid: f7792ce00c3c0aa48aa646180006c770, type: 3}
+  m_PrefabInstance: {fileID: 992491564583708390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1590180957
 GameObject:
   m_ObjectHideFlags: 0
@@ -7159,6 +7191,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3015579335273419436, guid: abff1f9d2d6ea0646902f08c9694c942, type: 3}
   m_PrefabInstance: {fileID: 1664198718}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1699213057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3670667314750829413, guid: ff0c22e08b8671c49a32e7b596a35e48, type: 3}
+  m_PrefabInstance: {fileID: 5788127843607306984}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1710615465
 PrefabInstance:
@@ -7668,6 +7705,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3015579335273419436, guid: abff1f9d2d6ea0646902f08c9694c942, type: 3}
   m_PrefabInstance: {fileID: 1783946930}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1800813241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3670667314750829413, guid: ff0c22e08b8671c49a32e7b596a35e48, type: 3}
+  m_PrefabInstance: {fileID: 450362156}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1804881172
 GameObject:
   m_ObjectHideFlags: 0
@@ -7924,6 +7966,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3015579335273419436, guid: abff1f9d2d6ea0646902f08c9694c942, type: 3}
   m_PrefabInstance: {fileID: 1820043398}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1871995840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8840488909975827656, guid: 2de642e5cfc293a439038bd571767f2f, type: 3}
+  m_PrefabInstance: {fileID: 1055828171}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1872366565
 GameObject:
@@ -8985,7 +9032,7 @@ GameObject:
   - component: {fileID: 2129919402}
   - component: {fileID: 2129919405}
   m_Layer: 0
-  m_Name: end barrier
+  m_Name: scene controller (end barrier)
   m_TagString: End
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9064,7 +9111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea8995147fb0ec4697b5499b8c68570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneFadeDuration: 2
+  sceneFadeDuration: 4
 --- !u!1 &2140290032
 GameObject:
   m_ObjectHideFlags: 0
@@ -9259,6 +9306,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogCanvas: {fileID: 1804881172}
   text: {fileID: 158185412}
+  responseColliders:
+  - {fileID: 1699213057}
+  - {fileID: 358194427}
+  - {fileID: 1585924142}
+  - {fileID: 1800813241}
+  - {fileID: 1871995840}
+  - {fileID: 46421053}
+  - {fileID: 451583953}
+  - {fileID: 998248981}
+  - {fileID: 491937236}
 --- !u!95 &2140290041
 Animator:
   serializedVersion: 5

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneController : MonoBehaviour
+public class MenuController : MonoBehaviour
 {
     [SerializeField]
     private float sceneFadeDuration;
@@ -16,20 +16,13 @@ public class SceneController : MonoBehaviour
         audioFade = Object.FindObjectsOfType<AudioManager>();
     }
 
-    private IEnumerator Start()
+    void Update()
     {
-        audioFade[0].ChangeClip(0);
-        yield return sceneFade.FadeInCoroutine(2);
-        yield return audioFade[0].FadeSoundCoroutine(0.01f, 1.0f, 2);
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
+        if (Input.GetKeyDown(KeyCode.W))
         {
             StartCoroutine(StartSceneFade());
             StartCoroutine(StartSoundFade());
-            StartCoroutine(LoadCutScene());        
+            StartCoroutine(LoadCutScene());
         }
     }
 
@@ -38,7 +31,7 @@ public class SceneController : MonoBehaviour
         yield return sceneFade.FadeOutCoroutine(sceneFadeDuration);
     }
 
-    private IEnumerator StartSoundFade()
+     private IEnumerator StartSoundFade()
     {
         yield return audioFade[0].FadeSoundCoroutine(1.0f, 0.01f, sceneFadeDuration);
     }
@@ -46,6 +39,6 @@ public class SceneController : MonoBehaviour
     private IEnumerator LoadCutScene()
     {
         yield return new WaitForSeconds(sceneFadeDuration);
-        SceneManager.LoadScene("CutScene");
+        SceneManager.LoadScene("CoreLoop");
     }
 }
