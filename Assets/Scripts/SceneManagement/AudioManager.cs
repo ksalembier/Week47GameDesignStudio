@@ -38,6 +38,11 @@ public class AudioManager : MonoBehaviour
         source.Play();
     }
 
+    public void MakeFullVolume()
+    {
+        source.volume = 1;
+    }
+
     public IEnumerator FadeSoundCoroutine(float startVolume, float targetVolume, float duration)
     {
         float elapsedTime = 0;

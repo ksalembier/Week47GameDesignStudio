@@ -1256,7 +1256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6290680908941652201, guid: b6895b3700e13f24386e0f694255e92b, type: 3}
       propertyPath: sceneFadeDuration
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7209141929084677080, guid: b6895b3700e13f24386e0f694255e92b, type: 3}
       propertyPath: m_Sprite

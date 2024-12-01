@@ -19,8 +19,8 @@ public class SceneController : MonoBehaviour
     private IEnumerator Start()
     {
         audioFade[0].ChangeClip(0);
-        yield return sceneFade.FadeInCoroutine(2);
-        yield return audioFade[0].FadeSoundCoroutine(0.01f, 1.0f, 2);
+        audioFade[0].MakeFullVolume();
+        yield return sceneFade.FadeInCoroutine(1);
     }
 
     void OnCollisionEnter2D(Collision2D collision)

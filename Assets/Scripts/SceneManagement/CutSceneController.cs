@@ -24,7 +24,6 @@ public class CutSceneController : MonoBehaviour
         yield return audioFade[0].FadeSoundCoroutine(0.01f, 0.2f, 2);
         // fading scene in 
         yield return sceneFade.FadeInCoroutine(sceneFadeDuration);
-        // fading buzzing from .1 to .2
         // holding on cut scene image
         yield return new WaitForSeconds(sceneFadeDuration);
         // fading scene out
