@@ -50,8 +50,6 @@ public class Collision : MonoBehaviour
         }
         else if (collider.gameObject.tag == "Player Dialog")
         {
-            // int colliderIndex = responseColliders.IndexOf(responseColliders, collider.gameObject);
-            // Debug.Log(colliderIndex);
             text.text = responses[currentResponse];
             dialogCanvas.SetActive(true);
         }   
